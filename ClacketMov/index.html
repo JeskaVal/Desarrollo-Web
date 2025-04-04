@@ -31,9 +31,27 @@
         <div class="modal-content">
             <span class="close">&times;</span>
             <h2>Iniciar sesión</h2>
-            <input type="email" placeholder="Correo electrónico">
-            <input type="password" placeholder="Contraseña">
-            <button>Iniciar Sesión</button>
+            
+            <div class="input-group">
+                <input type="email" placeholder="Correo electrónico" required>
+            </div>
+            
+            <div class="input-group">
+                <input type="password" placeholder="Contraseña" required>
+            </div>
+            
+            <div class="login-options">
+                <label>
+                    <input type="checkbox"> Recordarme
+                </label>
+                <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+            </div>
+            
+            <button class="login-btn">INICIAR SESIÓN</button>
+            
+            <div class="signup-link">
+                ¿No tienes cuenta? <a href="#">Suscríbete</a>
+            </div>
         </div>
     </div>
     <footer></footer>
