@@ -1,6 +1,17 @@
-body {
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: Arial, sans-serif;
+}
+
+body {
+    background: #000;
+    background-image: url('/ClacketMov/img/stranger-things-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
 }
 
 header {
@@ -8,53 +19,110 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #000;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
 }
 
-.logo img {
-    height: 50px;
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #8ab4f8;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+}
+
+nav ul li {
+    margin-left: 20px;
 }
 
 nav ul li a {
-    color: #fff;
     text-decoration: none;
+    color: white;
     font-size: 16px;
 }
 
+
 .hero {
     position: relative;
-    text-align: center;
-    color: white;
-}
-
-.hero img {
     width: 100%;
-    height: auto;
+    height: 100vh;
+    padding: 30px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.hero-text {
+.overlay {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3));
 }
 
-.hero-text h1 {
-    font-size: 48px;
-    margin: 0;
+.content {
+    position: relative;
+    z-index: 1;
 }
 
-.hero-text h2 {
-    font-size: 36px;
-    margin: 10px 0;
+.content h1 {
+    font-size: 42px;
+    font-weight: bold;
 }
 
-.hero-text p {
+.content p {
+    margin-top: 10px;
     font-size: 18px;
 }
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: rgba(68, 79, 230, 0.404);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    width: 300px;
+    text-align: center;
+}
+
+.close {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.603);
+}
+
+.modal-content button {
+    padding: 12px;
+    background-color: rgba(104, 26, 156, 0.466);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+.modal-content button:hover {
+    background-color: rgba(120, 11, 245, 0.589)
+};
