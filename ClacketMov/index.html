@@ -8,20 +8,22 @@
 </head>
 <body>
     <header>
-        <div class="logo">CLACKET MOV</div>
+        <div class="logo">
+            <img src="/ClacketMov/img/logo-name.png" alt="Clacket Mov" class="logo-img">
+        </div>
         <nav>
             <ul>
                 <li><a href="#">Sobre nosotros</a></li>
                 <li><a href="#">Preguntas Frecuentes</a></li>
                 <li><a href="#" id="openModal">Iniciar Sesión</a></li>
-                <li><a href="#">Suscribirse</a></li>
+                <li><a href="#" id="openSubscribeModal">Suscribirse</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section class="hero">
             <div class="overlay"></div>
-            <div class="content">
+            <div class="content hero-content">
                 <h1>Películas y series <br> Todo en un solo sitio</h1>
                 <p>Solicita tu cuenta gratis o suscríbete <br> por solo $100.00 al mes.</p>
             </div>
@@ -31,27 +33,62 @@
         <div class="modal-content">
             <span class="close">&times;</span>
             <h2>Iniciar sesión</h2>
-            
             <div class="input-group">
                 <input type="email" placeholder="Correo electrónico" required>
             </div>
-            
             <div class="input-group">
                 <input type="password" placeholder="Contraseña" required>
             </div>
-            
             <div class="login-options">
                 <label>
                     <input type="checkbox"> Recordarme
                 </label>
                 <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
             </div>
-            
             <button class="login-btn">INICIAR SESIÓN</button>
-            
             <div class="signup-link">
                 ¿No tienes cuenta? <a href="#">Suscríbete</a>
             </div>
+        </div>
+    </div>
+    <div id="subscribeModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Suscribirse</h2>
+            <div class="input-group">
+                <input type="text" placeholder="Nombre completo" required>
+            </div>
+            <div class="input-group">
+                <input type="email" placeholder="Correo electrónico" required>
+            </div>
+            <div class="input-group">
+                <input type="password" placeholder="Crear contraseña" required>
+            </div>
+            <div class="input-group">
+                <input type="password" placeholder="Confirmar contraseña" required>
+            </div>
+            <div class="plan-options">
+                <h3>Elige tu plan:</h3>
+                <div class="plan">
+                    <input type="radio" id="monthly" name="plan" value="monthly" checked>
+                    <label for="monthly">
+                        <span class="plan-name">Plan Mensual</span>
+                        <span class="plan-price">$100.00/mes</span>
+                    </label>
+                </div>
+                <div class="plan">
+                    <input type="radio" id="annual" name="plan" value="annual">
+                    <label for="annual">
+                        <span class="plan-name">Plan Anual</span>
+                        <span class="plan-price">$900.00/año <br> (Ahorras $300)</span>
+                    </label>
+                </div>
+            </div>
+            <div class="terms">
+                <input type="checkbox" id="terms" required>
+                <label for="terms">Acepto los <a href="#">Términos y Condiciones</a></label>
+            </div>
+            <button class="subscribe-btn">SUSCRIBIRME</button>
         </div>
     </div>
     <footer></footer>

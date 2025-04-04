@@ -24,10 +24,15 @@ header {
     z-index: 10;
 }
 
+
 .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #8ab4f8;
+    height: 50px;
+}
+
+.logo-img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
 }
 
 nav ul {
@@ -204,4 +209,105 @@ nav ul li a {
 
 .close:hover {
     color: #8ab4f8;
+}
+
+/* Subscribe Modal Specific Styles */
+.plan-options {
+    margin: 20px 0;
+}
+
+.plan-options h3 {
+    color: #8ab4f8;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.plan {
+    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    transition: all 0.3s;
+}
+
+.plan:hover {
+    border-color: #8ab4f8;
+}
+
+.plan input[type="radio"] {
+    margin-right: 10px;
+}
+
+.plan label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+}
+
+.plan-name {
+    font-weight: bold;
+}
+
+.plan-price {
+    color: #8ab4f8;
+}
+
+.terms {
+    margin: 20px 0;
+    font-size: 14px;
+    color: #aaa;
+}
+
+.terms label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.terms input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.terms a {
+    color: #8ab4f8;
+    text-decoration: none;
+}
+
+.terms a:hover {
+    text-decoration: underline;
+}
+
+.subscribe-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, #6a5acd, #8ab4f8);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.subscribe-btn:hover {
+    background: linear-gradient(to right, #8ab4f8, #6a5acd);
+    transform: translateY(-2px);
+}
+
+/* Efecto para ocultar/mostrar contenido del hero */
+.hero-content {
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-open .hero-content {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.hero-content {
+    transition: opacity 0.3s ease 0.1s, visibility 0.3s ease 0.1s;
 }
