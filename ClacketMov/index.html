@@ -9,9 +9,20 @@
 <body>
     <header>
         <div class="logo">
-            <img src="/ClacketMov/img/logo-name.png" alt="Clacket Mov" class="logo-img">
+            <!-- Logo para desktop -->
+            <img src="/ClacketMov/img/Logo-name.png" alt="Clacket Mov" class="logo-desktop">
+            <!-- Logo para mobile -->
+            <img src="/ClacketMov/img/logo-mobile.png" alt="Clacket Mov" class="logo-mobile">
         </div>
-        <nav>
+
+        <!-- Botón hamburguesa -->
+        <button class="hamburger" aria-label="Menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="nav-menu">
             <ul>
                 <li><a href="#">Sobre nosotros</a></li>
                 <li><a href="#">Preguntas Frecuentes</a></li>
@@ -29,6 +40,9 @@
             </div>
         </section>
     </main>
+    
+    <!-- Ventana Iniciar Sesion y Suscribirse -->
+
     <div id="loginModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>

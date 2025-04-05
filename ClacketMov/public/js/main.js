@@ -6,6 +6,31 @@ const subscribeBtn = document.getElementById("openSubscribeModal");
 const closeBtns = document.getElementsByClassName("close");
 const heroContent = document.querySelector(".hero-content");
 const body = document.body;
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
+
+// Menú hamburguesa
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+
+    // Cierra el menú al hacer clic en un enlace
+    const navLinks = document.querySelectorAll('.nav-menu a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
+});
+
+// Cierra el menú al hacer clic fuera
+document.addEventListener('click', (e) => {
+    if (!e.target.closest('.nav-menu') && !e.target.closest('.hamburger')) {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+    }
+});
 
 // Función para abrir modales
 function openModal(modal) {
