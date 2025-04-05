@@ -15,7 +15,7 @@
         justify-content: space-between;
         align-items: center;
         padding: 1rem 2rem;
-        background: rgba(0, 0, 0, 0.9);
+        background: rgba(0, 0, 0, 0.703);
         position: fixed;
         width: 100%;
         top: 0;
@@ -35,11 +35,11 @@
 /* Menú lateral izquierdo */
     .sidebar {
         position: fixed;
-        left: -250px;
+        left: -250px; /* -250px para ocultar - pero no vuelve a salir :c */
         top: 0;
         bottom: 0;
         width: 250px;
-        background: rgba(0, 0, 0, 0.95);
+        background: rgba(0, 0, 0, 0.95); /* pendiente color y transp */
         padding-top: 70px;
         transition: 0.3s;
         z-index: 999;
@@ -64,7 +64,7 @@
         background: #2a2a2a;
     }
 
-/* Contenido principal */
+/* Contenido principal (pendiente) */
     .main-content {
         margin-top: 70px;
         padding: 2rem;
@@ -74,19 +74,49 @@
         margin-bottom: 1.5rem;
     }
 
-/* Menús desplegables */
+/* Menú desplegable de USUARIO */
     .dropdown-menu {
-        display: none;
         position: absolute;
-        background: rgba(0, 0, 0, 0.9);
-        padding: 1rem;
-        right: 1rem;
+        right: 0;
         top: 100%;
-        min-width: 200px;
+        background: rgba(0, 0, 0, 0.95);
+        border: 1px solid #333;
+        min-width: 220px;
+        padding: 10px 0;
+        display: none;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        border-radius: 4px;
     }
 
-    .dropdown-menu.active {
-        display: block;
+    .dropdown-item {
+        display: flex;
+        align-items: center;
+        padding: 12px 20px;
+        color: #fff;
+        font-size: 14px;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    .dropdown-item:hover {
+        background: rgba(255, 255, 255, 0.05);
+    }
+
+    .dropdown-item i {
+        width: 25px;
+        font-size: 16px;
+        color: #8ab4f8;
+        margin-right: 15px;
+    }
+
+    .dropdown-item.logout {
+        border-top: 1px solid #333;
+        margin-top: 8px;
+        padding-top: 15px;
+    }
+
+    .dropdown-item.logout i {
+        color: #0977e5;
     }
 
 /* Búsqueda */
@@ -112,12 +142,12 @@
         color: white;
     }
 
-/* Iconos */
+/* Iconos (pendiente hacer que queden solo iconos sin nombre)*/
     .icon-btn {
         background: none;
         border: none;
         color: white;
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         cursor: pointer;
         transition: 0.3s;
     }

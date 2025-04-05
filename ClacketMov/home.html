@@ -21,20 +21,6 @@
             <button class="icon-btn search-toggle">
                 <i class="fas fa-search"></i>
             </button>
-            <div class="user-menu">
-                <button class="icon-btn user-toggle">
-                    <i class="fas fa-user"></i>
-                </button>
-                <div class="dropdown-menu">
-                    <div class="dropdown-item">Configuración</div>
-                    <div class="dropdown-item">Cambiar perfil</div>
-                    <div class="dropdown-item">Ayuda</div>
-                    <div class="dropdown-item">Cerrar sesión</div>
-                </div>
-            </div>
-        </div>
-    </nav>
-
     <!-- Menú lateral -->
     <aside class="sidebar">
         <ul class="sidebar-menu">
@@ -45,26 +31,47 @@
             <li class="sidebar-item"><i class="fas fa-list"></i> Mis Listas</li>
         </ul>
     </aside>
-
+    <!-- Menú Usuario -->
+        <div class="user-menu">
+            <button class="icon-btn user-toggle">
+                <i class="fas fa-user"></i>
+            </button>
+            <div class="dropdown-menu">
+                <div class="dropdown-item">
+                    <i class="fas fa-cog"></i>
+                    <span>Configuración</span>
+                </div>
+                <div class="dropdown-item">
+                    <i class="fas fa-user-edit"></i>
+                    <span>Cambiar perfil</span>
+                </div>
+                <div class="dropdown-item">
+                    <i class="fas fa-question-circle"></i>
+                    <span>Ayuda</span>
+                </div>
+                <div class="dropdown-item logout">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Cerrar sesión</span>
+                </div>
+            </div>
+        </div>
+    </nav>
     <!-- Búsqueda -->
     <div class="search-container">
         <input type="text" class="search-input" placeholder="Buscar...">
     </div>
-
     <!-- Contenido principal -->
     <main class="main-content">
         <h2 class="section-title">Ver ahora</h2>
         <div class="content-grid">
-            <!-- Contenido dinámico iría aquí -->
+            <!-- Contenido dinámico va aquí -->
         </div>
-
         <h2 class="section-title">Te sugerimos...</h2>
         <div class="content-grid">
-            <!-- Contenido dinámico iría aquí -->
+            <!-- Contenido dinámico va aquí -->
         </div>
     </main>
-
-    <!-- JavaScript específico para esta página -->
+    <!-- JavaScript -->
     <script src="/ClacketMov/public/js/home.js"></script>
 </body>
 </html>
