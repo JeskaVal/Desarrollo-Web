@@ -11,58 +11,71 @@
 
 </head>
 <body>
-    <!-- Barra superior -->
+
     <nav class="top-nav">
-        <button class="icon-btn menu-toggle">
-            <i class="fas fa-bars"></i>
-        </button>
-        <img src="/ClacketMov/img/Logo.png" alt="Logo" class="logo">
+        <!-- Menu hamburguesa -->
+        <aside class="sidebar">
+            <button class="close-sidebar">
+                <i class="fas fa-times"></i>
+            </button>
+            <ul class="sidebar-menu">
+                <li class="sidebar-item"><i class="fas fa-film"></i> Películas</li>
+                <li class="sidebar-item"><i class="fas fa-tv"></i> Series</li>
+                <li class="sidebar-item"><i class="fas fa-theater-masks"></i> Géneros</li>
+                <li class="sidebar-item"><i class="fas fa-fire"></i> Estrenos</li>
+                <li class="sidebar-item"><i class="fas fa-list"></i> Mis Listas</li>
+            </ul>
+        </aside>
+        <div class="nav-left">
+            <button class="icon-btn menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Logo -->
+        <div class="logo-container">
+            <img src="/ClacketMov/img/Logo.png" alt="Logo" class="logo">
+        </div>
+
+        <!-- Búsqueda y usuario -->
         <div class="nav-controls">
             <button class="icon-btn search-toggle">
                 <i class="fas fa-search"></i>
             </button>
-    <!-- Menú lateral -->
-    <aside class="sidebar">
-        <button class="close-sidebar">
-            <i class="fas fa-times"></i>
-        </button>
-        <ul class="sidebar-menu">
-            <li class="sidebar-item"><i class="fas fa-film"></i> Películas</li>
-            <li class="sidebar-item"><i class="fas fa-tv"></i> Series</li>
-            <li class="sidebar-item"><i class="fas fa-theater-masks"></i> Géneros</li>
-            <li class="sidebar-item"><i class="fas fa-fire"></i> Estrenos</li>
-            <li class="sidebar-item"><i class="fas fa-list"></i> Mis Listas</li>
-        </ul>
-    </aside>
-    <!-- Menú Usuario -->
-        <div class="user-menu">
-            <button class="icon-btn user-toggle">
-                <i class="fas fa-user"></i>
-            </button>
-            <div class="dropdown-menu">
-                <div class="dropdown-item">
-                    <i class="fas fa-cog"></i>
-                    <span>Configuración</span>
+
+            <div class="user-menu">
+                <button class="icon-btn user-toggle">
+                    <i class="fas fa-user"></i>
+                </button>
+                <div class="dropdown-menu">
+                    <div class="dropdown-item">
+                        <i class="fas fa-cog"></i>
+                        <span>Configuración</span>
+                    </div>
+                    <div class="dropdown-item">
+                        <i class="fas fa-user-edit"></i>
+                        <span>Cambiar perfil</span>
+                    </div>
+                    <div class="dropdown-item">
+                        <i class="fas fa-question-circle"></i>
+                        <span>Ayuda</span>
+                    </div>
+                    <div class="dropdown-item logout">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Cerrar sesión</span>
+                    </div>
                 </div>
-                <div class="dropdown-item">
-                    <i class="fas fa-user-edit"></i>
-                    <span>Cambiar perfil</span>
-                </div>
-                <div class="dropdown-item">
-                    <i class="fas fa-question-circle"></i>
-                    <span>Ayuda</span>
-                </div>
-                <div class="dropdown-item logout">
-                    <i class="fas fa-sign-out-alt"></i>
-                    <span>Cerrar sesión</span>
-                </div>
+            </div>
+
+            <!-- Contenedor de búsqueda -->
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Buscar...">
+                <button class="close-search"><i class="fas fa-times"></i></button>
             </div>
         </div>
     </nav>
-    <!-- Búsqueda -->
-    <div class="search-container">
-        <input type="text" class="search-input" placeholder="Buscar...">
-    </div>
+
+
     <!-- Contenido principal -->
     <main class="main-content">
         <h2 class="section-title">Ver ahora</h2>
@@ -74,6 +87,7 @@
             <!-- Contenido dinámico va aquí -->
         </div>
     </main>
+
     <!-- JavaScript -->
     <script src="/ClacketMov/public/js/home.js"></script>
 </body>
