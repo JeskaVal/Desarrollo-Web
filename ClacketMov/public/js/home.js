@@ -9,6 +9,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Menú de usuario
+    const closeSidebarBtn = document.querySelector('.close-sidebar');
+
+    closeSidebarBtn.addEventListener('click', () => {
+        sidebar.classList.remove('active');
+    });
+
     const userToggle = document.querySelector('.user-toggle');
     const userMenu = document.querySelector('.dropdown-menu');
 
