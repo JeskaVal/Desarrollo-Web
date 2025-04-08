@@ -85,4 +85,12 @@ document.addEventListener('DOMContentLoaded', () => {
             userMenu.classList.remove('active');
         }
     });
+    // ========================
+    // Efecto banner
+    // ========================
+    window.addEventListener('scroll', function() {
+        const banner = document.querySelector('.banner-image');
+        const scrollPosition = window.pageYOffset;
+        banner.style.transform = 'translateY(' + scrollPosition * 0.3 + 'px)';
+    });
 });
