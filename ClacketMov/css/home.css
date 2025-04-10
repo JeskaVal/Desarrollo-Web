@@ -83,6 +83,8 @@
         cursor: pointer;
         transition: 0.3s;
         color: white;
+        align-items: center;
+        grid-template-columns: 40px 1fr;
     }
 
     .sidebar-item:hover {
