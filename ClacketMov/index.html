@@ -15,7 +15,7 @@
             <img src="/ClacketMov/img/logo-mobile.png" alt="Clacket Mov" class="logo-mobile">
         </div>
 
-        <!-- Botón hamburguesa -->
+        <!-- Botón hamburguesa para responsive-->
         <button class="hamburger" aria-label="Menú">
             <span></span>
             <span></span>
@@ -24,8 +24,8 @@
 
         <nav class="nav-menu">
             <ul>
-                <li><a href="#">Sobre nosotros</a></li>
-                <li><a href="#">Preguntas Frecuentes</a></li>
+                <li><a href="#"id="openAboutUs">Sobre nosotros</a></li>
+                <li><a href="#"id="openFAQ">Preguntas Frecuentes</a></li>
                 <li><a href="#" id="openModal">Iniciar Sesión</a></li>
                 <li><a href="#" id="openSubscribeModal">Suscribirse</a></li>
             </ul>
@@ -41,6 +41,37 @@
         </section>
     </main>
 
+    <!-- modal para AboutUs/FAQ -->
+    <div id="AboutUsModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Sobre nosotros</h2>
+            <p>Clacket Mov es una plataforma de streaming que ofrece una amplia variedad de películas y series para todos los gustos. Nuestro objetivo es brindar entretenimiento de calidad a nuestros usuarios.</p>
+            <h3>¿Cómo funciona?</h3>
+            <p>Clacket Mov funciona mediante una suscripción mensual. Una vez que te suscribes, puedes acceder a todo nuestro catálogo de películas y series en cualquier momento y desde cualquier dispositivo.</p>
+            <h3>¿Qué dispositivos son compatibles?</h3>
+            <p>Clacket Mov es compatible con una amplia gama de dispositivos, incluyendo computadoras, tabletas y teléfonos inteligentes. Puedes ver tus películas y series favoritas en cualquier lugar y en cualquier momento.</p>
+            <h3>¿Qué tipo de contenido ofrecen?</h3>
+            <p>Ofrecemos una amplia variedad de contenido, incluyendo películas, series, documentales y programas de televisión. Nuestro catálogo se actualiza regularmente para ofrecerte lo mejor del entretenimiento.</p>
+            <h3>¿Cómo puedo cancelar mi suscripción?</h3>
+            <p>Puedes cancelar tu suscripción en cualquier momento a través de tu cuenta. No hay cargos ocultos ni penalizaciones por cancelar.</p>
+            <h3>¿Tienen una prueba gratuita?</h3>
+            <p>Sí, ofrecemos una prueba gratuita de 7 días para que puedas probar nuestro servicio antes de comprometerte a una suscripción.</p>
+        </div>
+    </div>
+    <div id="faqModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Preguntas Frecuentes</h2>
+            <p>¿Tienes preguntas? Aquí tienes algunas respuestas a las preguntas más comunes que recibimos.</p>
+            <h3>¿Cómo puedo registrarme?</h3>
+            <p>Puedes registrarte haciendo clic en el botón "Suscribirse" en la parte superior de la página. Completa el formulario y sigue las instrucciones para crear tu cuenta.</p>
+            <h3>¿Puedo ver Clacket Mov en mi televisor?</h3>
+            <p>Sí, puedes ver Clacket Mov en tu televisor si tienes un dispositivo compatible, como un Smart TV, Chromecast o Roku.</p>
+            <h3>¿Puedo ver Clacket Mov sin conexión a Internet?</h3>
+            <p>No, necesitas una conexión a Internet para ver Clacket Mov. Sin embargo, puedes descargar algunas películas y series para verlas sin conexión.</p>
+        </div>
+    </div>
     <!-- Ventana Iniciar Sesion y Suscribirse -->
 
     <div id="loginModal" class="modal">
@@ -92,12 +123,19 @@
                     </label>
                 </div>
                 <div class="plan">
+                    <input type="radio" id="free" name="plan" value="free" checked>
+                    <label for="free">
+                        <span class="plan-name">Cuenta Gratis</span>
+                        <span class="plan-price">$0.00<br>(aplican restricciones)</span>
+                    </label>
+                </div>
+                <!-- <div class="plan">
                     <input type="radio" id="annual" name="plan" value="annual">
                     <label for="annual">
                         <span class="plan-name">Plan Anual</span>
                         <span class="plan-price">$900.00/año <br> (Ahorras $300)</span>
                     </label>
-                </div>
+                </div> -->
             </div>
             <div class="terms">
                 <input type="checkbox" id="terms" required>
@@ -106,9 +144,10 @@
             <button class="subscribe-btn">SUSCRIBIRME</button>
         </div>
     </div>
-        <!-- Acá van a ir los modal para AboutUs/FAQ o puede ser antes de register-->
 
+    <!-- Pie de pagina -->
     <footer></footer>
+
     <!-- Enlace JavaScript -->
     <script src="/ClacketMov/public/js/main.js"></script>
 </body>
