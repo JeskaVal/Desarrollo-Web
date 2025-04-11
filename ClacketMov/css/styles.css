@@ -149,6 +149,22 @@ header {
     font-size: 24px;
 }
 
+.modal h3 {
+    color: #8ab4f8;
+    text-align: center;
+    margin-bottom: 2px;
+    font-size: 20px;
+}
+
+.modal p {
+    color: #ffffff;
+    text-align: justify;
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+
+
 .input-group {
     margin-bottom: 20px;
 }
@@ -273,7 +289,6 @@ header {
 .plan label {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     cursor: pointer;
     color: white;
 }
