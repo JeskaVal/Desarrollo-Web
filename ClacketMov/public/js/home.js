@@ -25,6 +25,45 @@ document.addEventListener('DOMContentLoaded', () => {
         e.stopPropagation();
         userMenu.classList.toggle('active');
     });
+    // ========================
+    // Cambio de perfil 
+    // ========================
+    const changeProfileBtn = document.getElementById('changeProfileBtn');
+    const overlay = document.getElementById('overlay');
+    const modalContainer = document.getElementById('modalContainer');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+    const profileButtons = document.querySelectorAll('.profile-button');
+
+    const openModal = () => {
+        overlay.style.display = 'block';
+        modalContainer.style.display = 'block';
+        modalContainer.setAttribute('aria-modal', 'true'); // Indica que es un diálogo modal
+    };
+
+    const closeModal = () => {
+        overlay.style.display = 'none';
+        modalContainer.style.display = 'none';
+        modalContainer.removeAttribute('aria-modal');
+    };
+    changeProfileBtn.addEventListener('click', openModal);
+    closeModalBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', closeModal);
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            closeModal();
+        }
+    });
+
+    profileButtons.forEach(button => {
+        button.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter') {
+                const profileName = button.getAttribute('data-profile');
+                alert(`Perfil seleccionado: ${profileName}`); // Aquí iría tu lógica de selección
+                closeModal();
+            }
+        });
+    });
 
     // ========================
     // Menú búsqueda animado

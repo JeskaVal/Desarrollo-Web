@@ -53,7 +53,7 @@
                         <span>Configuración</span>
                     </div>
                     <div class="dropdown-item">
-                        <i class="fas fa-user-edit"></i>
+                        <button id="changeProfileBtn"> <i class="fas fa-user-edit"></i></button>
                         <span>Cambiar perfil</span>
                     </div>
                     <div class="dropdown-item">
@@ -66,7 +66,111 @@
                     </div>
                 </div>
             </div>
-
+            
+        
+                <div id="overlay" class="overlay"></div>
+            
+                <div id="modalContainer" class="modal-container" role="dialog" aria-labelledby="modalTitle">
+                    <button id="closeModalBtn" class="close-modal-button" aria-label="Cerrar">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                    <h2 id="modalTitle">¿Quién usará la cuenta?</h2>
+                    <div class="profiles">
+                        <button class="profile-button" data-profile="Gaby">
+                            <div class="profile-avatar">
+                                <img src="./img/Perfil1.jpg" alt="Gaby">
+                            </div>
+                            <p class="profile-name">Gaby</p>
+                        </button>
+                        <button class="profile-button" data-profile="paco">
+                            <div class="profile-avatar">
+                                <img src="./img/Perfil2.jpg" alt="paco">
+                            </div>
+                            <p class="profile-name">paco</p>
+                        </button>
+                        <button class="profile-button" data-profile="Sury">
+                            <div class="profile-avatar">
+                                <img src="./img/Perfil3.jpg" alt="Sury">
+                            </div>
+                            <p class="profile-name">Sury</p>
+                        </button>
+                    </div>
+                </div>
+            
+                <script>
+                    const changeProfileBtn = document.getElementById('changeProfileBtn');
+                    const overlay = document.getElementById('overlay');
+                    const modalContainer = document.getElementById('modalContainer');
+                    const closeModalBtn = document.getElementById('closeModalBtn');
+                    const profileButtons = document.querySelectorAll('.profile-button');
+            
+                    const openModal = () => {
+                        overlay.style.display = 'block';
+                        modalContainer.style.display = 'block';
+                        modalContainer.setAttribute('aria-modal', 'true'); // Indica que es un diálogo modal
+                        changeProfileBtn.setAttribute('aria-expanded', 'true');
+                    };
+            
+                    const closeModal = () => {
+                        overlay.style.display = 'none';
+                        modalContainer.style.display = 'none';
+                        modalContainer.removeAttribute('aria-modal');
+                        changeProfileBtn.setAttribute('aria-expanded', 'false');
+                    };
+            
+                    changeProfileBtn.addEventListener('click', openModal);
+                    closeModalBtn.addEventListener('click', closeModal);
+                    overlay.addEventListener('click', closeModal);
+            
+                    document.addEventListener('keydown', (event) => {
+                        if (event.key === 'Escape') {
+                            closeModal();
+                        }
+                    });
+            
+                    profileButtons.forEach(button => {
+                        button.addEventListener('keydown', (event) => {
+                            if (event.key === 'Enter') {
+                                const profileName = button.getAttribute('data-profile');
+                                alert(`Perfil seleccionado: ${profileName}`); // Aquí iría tu lógica de selección
+                                closeModal();
+                            }
+                        });
+                    });
+                </script>
+            </body>
+            <!-- Contenedor  del modal  -->
+            <div id="modalContainer" class="modal-container" role="dialog" aria-labelledby="modalTitle">
+                <button id="closeModalBtn" class="close-modal-button" aria-label="Cerrar">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                    </svg>
+                </button>
+                <h2 id="modalTitle">¿Quién usará la cuenta?</h2>
+                <div class="profiles">
+                    <button class="profile-button" data-profile="Gaby">
+                        <div class="profile-avatar">
+                            <img src="https://i.imgur.com/VrEVh6j.png" alt="Gaby">
+                        </div>
+                        <p class="profile-name">Gaby</p>
+                    </button>
+                    <button class="profile-button" data-profile="paco">
+                        <div class="profile-avatar">
+                            <img src="https://i.imgur.com/d5oTeCT.jpeg" alt="paco">
+                        </div>
+                        <p class="profile-name">paco</p>
+                    </button>
+                    <button class="profile-button" data-profile="Sury">
+                        <div class="profile-avatar">
+                            <img src="https://i.imgur.com/XifW9Go.png" alt="Sury">
+                        </div>
+                        <p class="profile-name">Sury</p>
+                    </button>
+                </div>
+            </div>
+        
             <!-- Contenedor de búsqueda -->
             <div class="search-container">
                 <input type="text" class="search-input" placeholder="Buscar...">
